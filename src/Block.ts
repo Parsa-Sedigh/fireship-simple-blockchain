@@ -4,9 +4,10 @@ import {Transaction} from "./Transaction";
 export class Block {
     public nonce = Math.round(Math.random() * 999999999);
 
-    constructor(public prevHash: string,
+    constructor(public blockHash: string,
+                public prevHash: string,
                 public transaction: Transaction,
-                public ts = Date.now()) {}
+                public ts = Date.now(),) {}
 
     get hash() {
         const str = JSON.stringify(this);

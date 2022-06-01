@@ -11,7 +11,7 @@ export class Chain {
 
     constructor() {
         // Genesis block
-        this.chain = [new Block('', new Transaction(100, 'genesis', 'satoshi'))];
+        this.chain = [new Block('', '', new Transaction(100, 'genesis', 'satoshi'))];
     }
 
     get lastBlock() {
@@ -52,7 +52,7 @@ export class Chain {
         /* If isValid is true, we can verify that that user is actually trying to spend that amount of money to the other user. */
         if (isValid) {
             console.log('last: ', this.lastBlock.hash)
-            const newBlock = new Block(this.lastBlock.hash, transaction);
+            const newBlock = new Block(this.lastBlock.hash, this.lastBlock.blockHash, transaction);
 
             /* To find out this is a legitimate transaction, so anybody cannot send arbitrary transaction data to transfer coin to someone else, so we need
             * the mining process.*/
