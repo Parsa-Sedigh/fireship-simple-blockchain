@@ -2,9 +2,10 @@
   "name": "simple-blockchain",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "tsc -w"
+    "dev": "tsc -w",
+    "start": "tsc && node ."
   },
   "keywords": [],
   "author": "",

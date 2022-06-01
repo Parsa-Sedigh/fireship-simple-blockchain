@@ -1,4 +1,4 @@
-A block is like a container for multiple transactions. In oru case, just a single transaction to keep things simple. A block is like a
+A block is like a container for multiple transactions. In our case, just a single transaction to keep things simple. A block is like a
 linked list. Because each block has a reference or link to the previous block in the chain with the previous hash property.
 
 A hashing function allows you to take a value of an arbitrary size like say a transaction, then map it to a value with a fixed length, like a hexadecimal 
@@ -71,7 +71,7 @@ To implement a basic proof of work system, add a nonce value to Block class, whi
 Now in mine() of Chain class, it attempts to find a number that when added to the nonce, will produce a hash that starts with 4 zeros.
 The ONLY real way to figure out that value is with brute force by creating a while loop.
 
-MD5 algorithm is very similar to SHA=256 but is only a 128 bits and is faster to compute. MD5 is message-digest algorithm.
+`MD5` algorithm is very similar to SHA=256 but is only a 128 bits and is faster to compute. MD5 is message-digest algorithm.
 We'll continue to create new hashes inside the while loop until we find the one that starts with 0000, when we find it, we return the solution and send it
 to other nodes where it can be verified and the block can finally be confirmed on the blockchain.
 
